@@ -1,3 +1,4 @@
+// Teerut Srithongdee 6510405601
 package ku.cs.kafe.service;
 
 
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
+import java.util.UUID;
 
 
 @Service
@@ -30,6 +32,10 @@ public class MenuService {
 
     public List<Menu> getAllMenus() {
         return menuRepository.findAll();
+    }
+
+    public Menu getOneById(UUID id) {
+        return menuRepository.findById(id).get();
     }
 
 
